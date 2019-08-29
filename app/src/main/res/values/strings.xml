@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VideoPlayer</string>
+
+    <string name="request_state_loading">加载中…</string>
+    <string name="request_state_data_empty">没有发现数据哦</string>
+    <string name="request_state_timeout">请求超时，请重新再试</string>
+    <string name="play_complete">播放完毕</string>
+    <string name="play_error_prompt">播放错误，请重新播放</string>
+</resources>

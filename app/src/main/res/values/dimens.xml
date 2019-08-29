@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="progress_height">5dp</dimen>
+    <dimen name="audio_player_left_right_width_height">20dp</dimen>
+    <dimen name="media_controller_height">80dp</dimen>
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/media_controller">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_item_master_bottom_audio_progress_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0′00″"
+        android:textColor="#7A645A"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_item_master_bottom_audio_line"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/sb_item_master_bottom_audio_progress"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"/>
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/sb_item_master_bottom_audio_progress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxHeight="@dimen/progress_height"
+        android:minHeight="@dimen/progress_height"
+        android:progressDrawable="@drawable/style_audio_player_seekbar"
+        android:thumb="@drawable/style_audio_player_seekbar_thumb"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_item_master_bottom_audio_line"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.6"/>
+
+    <TextView
+        android:id="@+id/tv_item_master_bottom_audio_all_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0′00″"
+        android:textColor="#7A645A"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_item_master_bottom_audio_line"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintLeft_toRightOf="@+id/sb_item_master_bottom_audio_progress"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.8"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_item_master_bottom_audio_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"/>
+
+    <ImageView
+        android:id="@+id/img_item_master_skip_previous"
+        android:layout_width="@dimen/audio_player_left_right_width_height"
+        android:layout_height="@dimen/audio_player_left_right_width_height"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_master_audio_skip_previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/img_item_master_bottom_play_or_pause"
+        app:layout_constraintTop_toTopOf="@+id/gl_item_master_bottom_audio_line"/>
+
+    <ImageView
+        android:id="@+id/img_item_master_bottom_play_or_pause"
+        android:layout_width="21dp"
+        android:layout_height="28dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_master_audio_play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_item_master_bottom_audio_line"/>
+
+
+    <ImageView
+        android:id="@+id/img_item_master_skip_next"
+        android:layout_width="@dimen/audio_player_left_right_width_height"
+        android:layout_height="@dimen/audio_player_left_right_width_height"
+        android:scaleType="fitXY"
+        android:src="@mipmap/icon_master_audio_skip_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toRightOf="@+id/img_item_master_bottom_play_or_pause"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_item_master_bottom_audio_line"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
